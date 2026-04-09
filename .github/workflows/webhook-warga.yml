@@ -11,7 +11,10 @@ jobs:
     steps:
       - name: Ambil Data Commit
         id: commit_data
-        run: echo "MSG=$(jq -r '.head_commit.message' \"$GITHUB_EVENT_PATH\")" >> $GITHUB_ENV
+        run: |
+          echo "MSG<<EOF" >> $GITHUB_ENV
+          jq -r '.head_commit.message' "$GITHUB_EVENT_PATH" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Kirim Format Keren ke Discord Warga
         env:
