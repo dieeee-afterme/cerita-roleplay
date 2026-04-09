@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CWeaponInfoBlob>
+  <Item type="CWeaponInfo">
+    <Name>WEAPON_ASSAULTRIFLE</Name>
+    <!-- Buff Damage, reverted from Sinji's 10.0 -->
+    <Damage value="35.0" />
+    <WeaponRecoil>
+      <!-- Reverted Sinji's extreme recoil, restoring to default/optimized -->
+      <RecoilShakeAmplitude value="0.4" />
+      <RecoilAccuracyMax value="0.15" />
+    </WeaponRecoil>
+  </Item>
+  
+  <Item type="CWeaponInfo">
+    <Name>WEAPON_PISTOL</Name>
+    <!-- Buff Damage -->
+    <Damage value="26.0" />
+    <WeaponRecoil>
+      <RecoilShakeAmplitude value="0.2" />
+      <RecoilAccuracyMax value="0.05" />
+    </WeaponRecoil>
+  </Item>
+</CWeaponInfoBlob>

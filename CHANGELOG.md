@@ -7,6 +7,13 @@ Formatnya mengacu pada [Keep a Changelog](https://keepachangelog.com/id/1.0.0/).
 ## [Unreleased]
 *(Tuliskan rencana update kamu di sini)*
 
+## [1.2.0] - 2026-04-09
+### Changed
+- Mengembalikan *recoil* senjata dan buff ulang *damage* beberapa senjata yang sebelumnya di-*nerf* parah oleh Sinji (`[assets]/[weapons]/custom-weapons`).
+
+### Removed
+- Membersihkan dan membuang semua folder/aset sampah sisaan Sinji yang tidak penting untuk mengoptimalkan penggunaan memori server.
+
 ## [1.1.0] - 2026-04-09
 ### Added
 - Menambahkan bangunan MLO baru untuk roleplay mekanik (`[maps]/bengkel-mlo`).
