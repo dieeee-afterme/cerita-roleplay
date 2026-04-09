@@ -7,6 +7,14 @@ Formatnya mengacu pada [Keep a Changelog](https://keepachangelog.com/id/1.0.0/).
 ## [Unreleased]
 *(Tuliskan rencana update kamu di sini)*
 
+## [1.1.0] - 2026-04-09
+### Added
+- Menambahkan bangunan MLO baru untuk roleplay mekanik (`[maps]/bengkel-mlo`).
+- Pembaruan tekstur dan model baju fraksi baru (`[clothing]/baju-fraksi`).
+
+### Fixed
+- Melakukan *tuning* dan memperbaiki `handling.meta` untuk mobil dinas polisi agar tidak terlalu licin.
+
 ## [1.0.0] - 2026-04-09
 ### Added
 - Pembuatan dan inisialisasi awal repository untuk **Cerita Roleplay**.

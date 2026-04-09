@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CHandlingDataMgr>
+  <HandlingData>
+    <Item type="CHandlingData">
+      <handlingName>POLICE</handlingName>
+      <fMass value="1500.0" />
+      <fInitialDragCoeff value="8.0" />
+      <fPercentSubmerged value="85.0" />
+      <vecCentreOfMassOffset x="0.0" y="0.0" z="-0.1" />
+      <vecInertiaMultiplier x="1.0" y="1.2" z="1.15" />
+      <!-- Updated Handling lines below to fix drifting issue -->
+      <fTractionCurveMax value="2.65" />
+      <fTractionCurveMin value="2.5" />
+      <fTractionCurveLateral value="22.5" />
+      <fAntiRollBarForce value="2.8" />
+      <fAntiRollBarBiasFront value="0.65" />
+    </Item>
+  </HandlingData>
+</CHandlingDataMgr>
