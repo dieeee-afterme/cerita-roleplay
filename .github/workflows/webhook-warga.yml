@@ -24,5 +24,18 @@ jobs:
           
           curl -H "Content-Type: application/json" -X POST -d "$(jq -n \
             --arg msg "$MSG" \
-            '{content: "<@&1466700911890923786>\n\n# ║ 🚨 UPDATE PATCH KOTA ║\nYo warga, ada update terbaru nih dari pusat yang udah masuk kota. Check this out!\n\n**Changelog:**\n```diff\n+ \($msg)\n```"}')" \
+            '{
+              content: "<@&1466700911890923786>",
+              embeds: [{
+                title: "🚨 UPDATE PATCH KOTA BERHASIL DI-DEPLOY!",
+                description: "Yo warga, ada update terbaru nih dari pusat yang udah masuk! Check this out!\n\n**🛠️ Changelog:**\n```diff\n\($msg)\n```\n🌟 *Tetap patuhi rules kota dan selamat ber-roleplay!*",
+                color: 5814783,
+                image: {
+                  url: "https://media1.tenor.com/m/Z6uS7wA_87AAAAAd/gta-gta5.gif"
+                },
+                footer: {
+                  text: "Cerita Roleplay GitHub Auto-System • \((. | now | strftime("%Y-%m-%d %H:%M:%S")))"
+                }
+              }]
+            }')" \
             "$WEBHOOK_URL"
