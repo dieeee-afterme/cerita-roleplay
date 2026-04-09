@@ -1,0 +1,28 @@
+name: Pengumuman Update Warga
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  kirim-pengumuman:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil Data Commit
+        id: commit_data
+        run: echo "MSG=$(jq -r '.head_commit.message' \"$GITHUB_EVENT_PATH\")" >> $GITHUB_ENV
+
+      - name: Kirim Format Keren ke Discord Warga
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_WARGA }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "Error: Secret WEBHOOK_WARGA belum di-set di GitHub repository kamu!"
+            exit 1
+          fi
+          
+          curl -H "Content-Type: application/json" -X POST -d "$(jq -n \
+            --arg msg "$MSG" \
+            '{content: "<@&1466700911890923786>\n\n# ║ 🚨 UPDATE PATCH KOTA ║\nYo warga, ada update terbaru nih dari pusat yang udah masuk kota. Check this out!\n\n**Changelog:**\n```diff\n+ \($msg)\n```"}')" \
+            "$WEBHOOK_URL"
