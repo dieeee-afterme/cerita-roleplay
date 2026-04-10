@@ -15,7 +15,6 @@ Formatnya mengacu pada [Keep a Changelog](https://keepachangelog.com/id/1.0.0/).
 ### Fixed
 - Memperbaiki berbagai error pada *handling* kendaraan dan *damage* senjata yang terbengkalai.
 - **Note:** Semua perbaikan ini dikerjakan sendiri dengan kilat, sementara Sinji asik main Roblox dan tidak membantu sama sekali. *GG Sinji!*
-
 ## [1.2.0] - 2026-04-09
 ### Changed
 - Mengembalikan *recoil* senjata dan buff ulang *damage* beberapa senjata yang sebelumnya di-*nerf* parah oleh Sinji (`[assets]/[weapons]/custom-weapons`).
