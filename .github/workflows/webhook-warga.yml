@@ -1,0 +1,46 @@
+name: Pengumuman Update Warga
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  kirim-pengumuman:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil Data Commit
+        id: commit_data
+        run: |
+          echo "MSG<<EOF" >> $GITHUB_ENV
+          jq -r '.head_commit.message' "$GITHUB_EVENT_PATH" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Kirim Format Keren ke Discord Warga
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_WARGA }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "Error: Secret WEBHOOK_WARGA belum di-set di GitHub repository kamu!"
+            exit 1
+          fi
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+          
+          curl -H "Content-Type: application/json" -X POST -d "$(jq -n \
+            --arg msg "$MSG" \
+            --arg ts "$TIMESTAMP" \
+            '{
+              content: "<@&1466700911890923786>",
+              embeds: [{
+                title: "🚨 UPDATE PATCH KOTA BERHASIL DI-DEPLOY!",
+                description: "Yo warga, ada update terbaru nih dari pusat yang udah masuk! Check this out!\n\n**🛠️ Changelog:**\n```diff\n\($msg)\n```\n🌟 *Tetap patuhi rules kota dan selamat ber-roleplay!*",
+                color: 5814783,
+                image: {
+                  url: "https://media1.tenor.com/m/Z6uS7wA_87AAAAAd/gta-gta5.gif"
+                },
+                footer: {
+                  text: "Cerita Roleplay GitHub Auto-System • \($ts)"
+                }
+              }]
+            }')" \
+            "$WEBHOOK_URL"

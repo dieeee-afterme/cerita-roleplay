@@ -1,0 +1,30 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs & Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# FiveM Cache & Logs
+cache/
+crashes/
+server-data/cache/
+*.log
+*.dmp
+
+# Backup and Temporary files
+*.bak
+*.tmp
+*.temp
+*~
