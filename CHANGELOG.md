@@ -4,8 +4,13 @@ Semua riwayat perubahan (pembaruan baju, mobil, maupun fitur server) proyek ini 
 
 Formatnya mengacu pada [Keep a Changelog](https://keepachangelog.com/id/1.0.0/).
 
-## [Unreleased]
-*(Tuliskan rencana update kamu di sini)*
+## [1.5.0] - 2026-04-13
+### Fixed
+- Memperbaiki model *halfped* warga yang sebelumnya sering mengalami *glitch* tekstur.
+- Melakukan optimasi dan perbaikan pada beberapa variasi *skin tone* ped agar lebih konsisten di berbagai kondisi pencahayaan.
+
+### Note
+- **Note:** Update kelar lagi hari ini sat-set-sat-set. Harusnya kota makin asik kalau semua admin kerja, bukan kayak Shinji yang malah asik nge-push rank di PUBG PC. Inget Nji, warga nungguin lu di kota buat ngurusin server, bukan cuma nongol pas ada RP Badside doang nyari senengnya sendiri. Balik ke kota buru sebelum warganya pada lumutan nungguin lu!
 
 ## [1.4.0] - 2026-04-12
 ### Added
